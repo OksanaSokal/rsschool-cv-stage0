@@ -1,6 +1,6 @@
-#Oksana Petrenko
+# Oksana Petrenko
 ---
-##Contact info
+## Contact info
 * **phone:** +7(916)443-34-41
 * **email:** sokaloksana@gmail.com
 * **discord:** OksanaSokal
