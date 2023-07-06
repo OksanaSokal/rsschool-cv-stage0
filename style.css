@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Montserrat:wght@100;200;400;500;700;900&family=PT+Sans:ital,wght@0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,900;1,100&display=swap');
+
+html {
+    scroll-behavior: smooth; 
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #545252;
+}
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .header-nav{
+    background-color: #FFF5EE;
+    border: 1px solid #FFF5EE;
+  }
+
+  .header-nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding-top: 20px;
+    transition: color 0.5s;
+  }
+  .header-nav-item {
+    margin: 0px 25px 0px;
+    font-size: 20px;
+  }
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #545252;
+  }
+
+  .nav-link::before {
+    content: '';
+	position: absolute;
+	left: 0; 
+    bottom: -5px;
+	width: 0;
+	height: 1.5px;
+	background-color: #3c3c3c;
+    transition: width 0.7s;
+  }
+
+  .nav-link:hover:before {
+    width: 100%;
+  }
+
+  .main-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+    border-top: 3px solid grey;
+    border-bottom: 3px solid grey;
+  }
+
+  .main-photo {
+    width: 50%;
+    position: relative;
+    padding-left: 100px;
+  }
+
+  .main-photo-img {
+    max-width: 400px;
+  }
+
+  .main-title {
+    width: 50%;
+    padding-right: 30px;
+    text-align: right;   
+  }
+
+  .main-profession {
+    font-size: 20px;
+  }
+
+  .section-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section {
+    width: 50%;
+  }
+
+  .section-link {
+    text-decoration: none;
+    color: #545252;
+  }
+
+  .footer {
+    
+  }
+
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid grey;
+    background-color: #FFF5EE;;
+  }
+
+  .footer-name {
+    padding: 40px 80px;
+  }
+
+  .footer-logo {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 60px;
+    width: 250px;
+  }
