@@ -43,6 +43,8 @@
     margin: 0 auto;
  }
 
+/*header start*/
+
  .header__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +141,9 @@
     z-index: 7; /*не работает, тень на надписи*/
 }
 
+/*header end*/
+
+/*section about start*/
 .content {
     padding: 0 20px;
     display: flex;
@@ -151,7 +156,7 @@
     position: relative;
 }
 
-.about__title {
+.title {
     color: #0C0C0E;
     font-family: Forum;
     font-size: 40px;
@@ -164,7 +169,7 @@
     text-align: center;
 }
 
-.about__title::after {
+.title::after {
     content: "";
     position: absolute;
     top: 80px;
@@ -226,13 +231,172 @@
     border-radius: 50%;
 }
 
-/*
-.about__btn:first-child {
-    content: "";
-    background-color: #BB945F;
-    border: 1px solid #BB945F;
-}*/
+/*section about end*/
 
+/*section favorites start*/
+
+.favorites {
+    position: relative;
+}
+/*
+.favorites__title {
+    padding: 20px 0px 20px;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+.favorites__title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #0C0C0E;
+    display: block;
+    left: 50%;
+    top: 80px;
+} */
+
+.favorites__subtitle {
+    padding: 40px 0px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form__wrap {
+    display: flex;
+}
+
+.form__box {
+    margin-right: 85px;
+    padding-bottom: 40px;
+}
+
+.custom-radio-btn { /*внешний круг радио кнопки*/
+    position:relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 20px;
+}
+.custom-radio-btn::before { /*внутренний круг радио кнопки*/
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute; /*выравнивание*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+}
+
+.real-radio-btn:checked + .custom-radio-btn::before { /*кастомная кнопка включится, если включится реальная*/
+    transform: translate(-50%, -50%) scale(1);  
+}
+
+.real-radio-btn { /*скрываем реальную кнопку*/
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.form__label {
+    display: inline-block;
+    padding: 5px;
+    margin-left: -5px;  /*увеличиваем область наведения*/
+}
+
+.favorites__line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.favorites__box {
+    width: 550px;
+    height: 555px;
+    border: 1px solid #000;
+    position: relative;
+    margin: 40px 20px 40px 0px;
+ }
+ 
+.favorites__headline {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding: 15px 0px 20px 20px;
+    position: relative;
+    vertical-align: top;
+}
+
+.favorites__headline::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: #BB945F;
+    left: 20px;
+    top: 55px;
+}
+
+.favorites__name, .favorites__author {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0px 0px 0px 20px;
+}
+
+.favorites__author {
+    text-transform: none;
+}
+
+.favorites__text {
+    width: 355px;
+    height: 320px;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.favorites__btn {
+    margin: 15px 0px 15px 20px;
+    padding: 9px 27px;
+    color: #0C0C0E;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.favorites__img {
+    position: absolute;
+    bottom: -1px;
+    right: -40px;
+}
+
+/*section favorites end*/
+
+/*footer start*/
 .footer {
     background-color: #0C0C0E;
     color: #FFF;
@@ -287,3 +451,4 @@
     text-decoration: none;
     color: inherit;
 }
+/*footer end*/
