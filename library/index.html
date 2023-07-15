@@ -6,6 +6,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.ico">
 </head>
 <body>
     <div class="wrapper">
@@ -36,18 +37,18 @@
                         <img class="header__img" src="./img/svg/icon_profile.svg" alt="icon-profile">
                     </div>
                 </div>
+                <section class="welcome">
+                    <h2>Welcome </h2>
+                    <p>to the Brooklyn</p>
+                    <p>Library</p> 
+                </section>
             </header>
-            <section class="welcome">
-                <p>Welcome </p>
-                <p>to the Brooklyn</p>
-                <p>Library</p> 
-            </section>
         </div>
         <div class="content">
             <main class="main">
                 <section class="about title" id="about">
                   <h2 class="about__title">About</h2>
-                  <p class="about__subtitle">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                  <p class="about__subtitle">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
                   <div class="about__wrap">
                       <div class="about__photo">
                           <img src="./img/photo1.jpg" alt="photo">
@@ -67,7 +68,7 @@
                       </div>
                   </div>
               </section>
-              <section class="favorites">
+              <section class="favorites" id="favorites">
                 <h2 class="favorites__title title">Favorites</h2>
                 <p class="favorites__subtitle">Pick favorites of season</p>
                 <form class="form__wrap"  action="#">
@@ -162,7 +163,7 @@
                     </div>
                 </div>
               </section>
-              <section class="coffee">
+              <section class="coffee" id="coffeeshop">
                 <h2 class="coffee__title title">Coffee shop</h2>
                 <p class="coffee__subtitle">In our library, we have of cozy coffee shop, welcoming in customers 
                 with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, 
@@ -224,8 +225,8 @@
                     </div>
                 </div>
               </section>
-              <section class="contacts">
-                <h2 class="contacts__title title" title>Our Contacts</h2>
+              <section class="contacts" id="contacts">
+                <h2 class="contacts__title title">Our Contacts</h2>
                 <div class="contacts__box">
                     <div class="contacts__phone">
                         <p class="contacts__subtitle bold">For all Library inquiries:</p>
@@ -248,7 +249,7 @@
                     </div>
                 </div>
               </section>
-              <section class="cards">
+              <section class="cards" id="librarycard">
                 <h2 class="cards__title title">Digital Library Cards</h2>
                 <div class="cards__box">
                     <div class="cards__have">
@@ -256,8 +257,8 @@
                         <form class="cards__border" action="#">
                             <div class="cards__input">
                                 <p class="cards__input__text">Brooklyn Public Library</p>
-                                <input class="cards__field" placeholder="Reader's name" type="text">
-                                <input class="cards__field" placeholder="Card number" type="text">
+                                <input class="cards__field" type="text" placeholder="Reader's name" type="text">
+                                <input class="cards__field" type="number" placeholder="Card number" type="text">
                             </div>
                             <button class="cards__btn">Check the card</button>
                         </form>  
@@ -267,7 +268,7 @@
                         <p class="cards__text">You will be able to see a reader card after logging 
                         into account or you can register a new account</p>
                         <button class="cards__get__btn">Sign Up</button>
-                        <button class="cards__get__btn">Log in</button>
+                        <button class="cards__get__btn btn__login">Log in</button>
                     </div> 
                 </div>
               </section>
@@ -278,13 +279,13 @@
                 <div class="footer__info">
                     <div class="footer__place">
                         <p class="address">
-                            <a class="address__link" href="#map">286 Cadman Plaza, New York, NY 11238, United States</a> 
+                            <a class="address__link" target="_blank" href="https://www.google.com/maps/search/286+Cadman+Plaza,+New+York,+NY+11238,+United+States/@40.6956377,-73.9932709,17z/data=!3m1!4b1?hl=ru&entry=ttu">286 Cadman Plaza, New York, NY 11238, United States</a> 
                         </p>  
-                        <p class="media">
-                            <a target="_blank" href="https://twitter.com/"><img class="footer__img" src="./img/svg/twitter.svg" alt="twitter"></a>
-                            <a target="_blank" href="https://www.instagram.com/"><img class="footer__img" src="./img/svg/instagram.svg" alt="instagram"></a>
-                            <a target="_blank" href="https://www.facebook.com/"><img class="footer__img" src="./img/svg/facebook.svg" alt="facebook"></a>
-                        </p>
+                        <ul class="media">
+                            <li><a class="media__link" target="_blank" href="https://twitter.com/"><img class="footer__img" src="./img/svg/twitter.svg" alt="twitter"></a></li>
+                            <li><a class="media__link" target="_blank" href="https://www.instagram.com/"><img class="footer__img" src="./img/svg/instagram.svg" alt="instagram"></a></li>
+                            <li><a class="media__link" target="_blank" href="https://www.facebook.com/"><img class="footer__img" src="./img/svg/facebook.svg" alt="facebook"></a></li>
+                        </ul>
                     </div>
                     <div class="footer__time">
                         <p class="workdays">
@@ -304,7 +305,7 @@
                     <div>
                         <a class="footer__link" target="_blank" href="https://rs.school/js-stage0/">The Rolling Scopes School</a>
                     </div>
-                    <div>
+                    <div class="footer__name">
                         <a class="footer__link" target="_blank" href="https://github.com/OksanaSokal">Oksana Petrenko</a>
                     </div>
                 </div>

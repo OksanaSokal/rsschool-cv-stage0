@@ -1,27 +1,4 @@
-/* inter-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-900 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/inter-v12-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
 
  html {
     box-sizing: border-box;
@@ -32,7 +9,7 @@
  }
 
  body {
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
@@ -53,6 +30,11 @@
     align-items: center;
  }
 
+ .header__nav {
+    
+    height: 50px;
+ }
+
  .header__list {
     display: flex;
     flex-wrap: wrap;
@@ -69,15 +51,13 @@
  }
 
  .header__item {
-    padding-right: 30px;
+    margin-right: 30px;
     z-index: 5;
  }
 
  .header__item:last-child {
-    padding-right: 40px;
-    margin-right: 51px;
+    margin-right: 40px;
  }
-
  .background-library {
     height: 690px;
     background: url(../img/Welcome-1.png) no-repeat center;
@@ -101,27 +81,26 @@
 
  .header__name {
     z-index: 5;
-    padding: 20px;
+    margin: 20px 454px 20px 20px;
     color: #FFF;
     font-family: Forum;
     font-size: 30px;
     line-height: 50px;
     letter-spacing: 0.6px;
-    font-style: normal;
-    font-weight: 400;
+    width: 294px;
+    height: 50px;
  }
 
  .header__link {
     text-decoration: none;
     color: #FFF;
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
     line-height: 50px; 
 }
 
 .header__img {
-    padding: 31px 20px 31px 0px;
+    margin: 31px 20px 31px 0px;
     z-index: 5;
 }
 
@@ -138,7 +117,8 @@
     line-height: 50px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    z-index: 7; /*не работает, тень на надписи*/
+    z-index: 5;
+    position: relative;
 }
 
 /*header end*/
@@ -183,12 +163,13 @@
 }
 
 .about__subtitle {
-    padding: 61px 0px 20px;
-    text-align: center;
+    margin: 61px 0px 20px;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 40px;
+    text-align: center;
+    font-family: Inter;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .about__wrap {
@@ -203,7 +184,7 @@
 
 .about__buttons {
     display: flex;
-    padding: 40px 0px;
+    margin: 35px 0px;
 }
 
 .about__btn {
@@ -211,6 +192,7 @@
     height: 26px;
     width: 26px;
     padding: 5px;
+    outline: none !important;
 }
 
 .about__btn__link {
@@ -238,44 +220,21 @@
 .favorites {
     position: relative;
 }
-/*
-.favorites__title {
-    padding: 20px 0px 20px;
-    text-align: center;
-    font-family: Forum;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-}
-
-
-.favorites__title::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 1px;
-    background-color: #0C0C0E;
-    display: block;
-    left: 50%;
-    top: 80px;
-} */
 
 .favorites__subtitle {
-    padding: 40px 0px;
-    color: #000;
+    margin: 63px 0px 40px;
     font-size: 20px;
     font-weight: 700;
 }
 
 .form__wrap {
     display: flex;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .form__box {
-    margin-right: 85px;
-    padding-bottom: 40px;
+    margin: 0px 85px 35px 0px;
 }
 
 .custom-radio-btn { /*внешний круг радио кнопки*/
@@ -287,7 +246,7 @@
     border: 2px solid #000000;
     border-radius: 50%;
     vertical-align: text-top;
-    margin-right: 20px;
+    margin: 5px 20px 0px 0px;
 }
 .custom-radio-btn::before { /*внутренний круг радио кнопки*/
     content: "";
@@ -318,7 +277,9 @@
 .form__label {
     display: inline-block;
     padding: 5px;
-    margin-left: -5px;  /*увеличиваем область наведения*/
+    margin-left: -5px;
+    margin-top: -3px;
+    cursor: pointer;  /*увеличиваем область наведения*/
 }
 
 .favorites__line {
@@ -331,7 +292,7 @@
     height: 555px;
     border: 1px solid #000;
     position: relative;
-    margin: 40px 20px 40px 0px;
+    margin: 0px 40px 40px 0px;
  }
  
 .favorites__headline {
@@ -377,6 +338,7 @@
     line-height: 40px;
     letter-spacing: 2px;
     text-transform: capitalize;
+    margin-top: 20px;
 }
 
 .favorites__btn {
@@ -386,12 +348,23 @@
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
+    transition: border 0.7s;
+    transition:  background-color 0.6s;
+    width: 75px;
+    height: 30px;
+}
+
+.favorites__btn:hover{
+    background-color: #BB945F;
+    border: 2px solid #BB945F;
+    border-radius: 2px;
 }
 
 .btn__own {
     color: #BB945F;
-    border: 1px solid #BB945F;
+    border: 1px solid #BB945F !important;
     border-radius: 2px;
+    background-color: #FFF !important;
 }
 
 .favorites__img {
@@ -409,13 +382,14 @@
 }
 
 .coffee__subtitle {
-    padding: 61px 0px 40px 0px;
+    width: 1400px;
+    margin: 61px 0px 40px 0px;
     text-align: center;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 2px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .coffe__wrap {
@@ -455,6 +429,10 @@
     justify-content: space-between;
     position: relative;
     padding-bottom: 40px;
+}
+
+.coffee__price {
+    font-family: Forum;
 }
 
 .coffee__price::before {
@@ -549,7 +527,7 @@
 }
 
 .cards__title {
-    padding-bottom: 60px;
+    padding-bottom: 61px;
 }
 
 .cards__box {
@@ -558,7 +536,7 @@
 }
 
 .cards__subtitle {
-    margin: 0px 0px 30px 138px;
+    margin: 3px 0px 33px 138px;
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 0.6px;
@@ -566,14 +544,14 @@
 
 .cards__border {
     border: 3px solid #BB945F;
-    margin-bottom: 41px;
+    margin-bottom: 39px;
     box-shadow: 0px 13px 18px -19px #000000;
 }
 
 .cards__input {
     background: #BB945F;
-    margin: 20px;
-    padding-bottom: 25px;
+    margin: 17px;
+    padding-bottom: 2px;
 }
 
 .cards__input__text {
@@ -592,6 +570,12 @@
     margin: 0px 20px 25px 20px;
     border-radius: 10px;
     border: none;
+    font-family: Forum;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    padding: 8px 0px 8px 20px;
+    color:#BB945F;
 }
 
 .cards__field::placeholder {
@@ -600,7 +584,7 @@
     font-size: 30px;
     line-height: 50px;
     letter-spacing: 0.6px;
-    padding: 8px 0px 8px 20px;
+    padding: 8px 0px 8px 0px;
 }
 
 .cards__btn {
@@ -610,7 +594,7 @@
     letter-spacing: 1px;
     border-radius: 2px;
     border: 1px solid #0C0C0E;
-    margin: 0px 179px 30px;
+    margin: 3px 179px 30px;
     padding: 10px 40px;
 }
 
@@ -623,7 +607,7 @@
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 0.6px;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 }
 
 .cards__text {
@@ -637,7 +621,7 @@
 }
 
 .cards__get__btn {
-    margin-left: 20px;
+    margin-left: 15px;
     text-align: center;
     font-size: 10px;
     font-weight: 700;
@@ -645,6 +629,10 @@
     border-radius: 2px;
     border: 1px solid #0C0C0E;
     padding: 10px 15px;
+}
+
+.btn__login {
+    width: 75px;
 }
 
 /*section library card end*/
@@ -669,9 +657,13 @@
     padding-bottom: 18px;
 }
 
+.media {
+    display: flex;
+}
 .address__link {
     text-decoration: none;
     color: inherit;
+    outline: none !important;
 }
 
 .footer__info {
@@ -684,6 +676,9 @@
     margin-right: 15px;
 }
 
+.media__link {
+    outline: none !important;
+}
 .workdays {
     text-align: right;
     margin-bottom: 10px;
@@ -698,10 +693,19 @@
     display: flex;
     justify-content: space-between;
     padding-top: 44px;
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.footer__name {
+    margin-left: -140px;
 }
 
 .footer__link {
     text-decoration: none;
     color: inherit;
+    outline: none !important;
 }
 /*footer end*/
